@@ -45,52 +45,52 @@ function expandAllDetails(e) {
 // *** Connect to GitHub & populate page ***
 const REPOS = [ 
     {
-        image: "Project1",
         name: "Minesweeper",
         description: "Minesweeper game",
         techStack: "CSS, HTML, JavaScript",
         repo: "https://github.com/Chas-Henrik/Minesweeper/", 
-        site: "https://chas-henrik.github.io/Minesweeper/"
+        site: "https://chas-henrik.github.io/Minesweeper/",
+        image: "Project1"
     }, 
     {
-        image: "Project2",
-        name: "OOP-Poker",
-        description: "Online Poker Game for 2-5 players",
+        name: "Online Poker",
+        description: "Online poker game for 2-5 players",
         techStack: "CSS, HTML, JavaScript",
         repo: "https://github.com/Chas-Henrik/OOP-Poker/", 
-        site: "https://chas-henrik.github.io/OOP-Poker/"
+        site: "https://chas-henrik.github.io/OOP-Poker/",
+        image: "Project2"
     },
     {
-        image: "Project3",
-        name: "ToDo-List-Typescript-Firebase", 
-        description: "ToDo List Typescript with Firestore Database",
+        name: "Todo List", 
+        description: "Todo list using Firestore database",
         techStack: "CSS, HTML, JavaScript, TypeScript",
         repo: "https://github.com/Chas-Henrik/ToDo-List-Typescript-Firebase/", 
-        site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"
+        site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/",
+        image: "Project3"
     },
     {
-        image: "Project4",
-        name: "Word-Count", 
+        name: "Word Count", 
         description: "Counts the word in submitted text",
         techStack: "CSS, HTML, JavaScript",
         repo: "https://github.com/Chas-Henrik/Word-Count/", 
-        site: "https://chas-henrik.github.io/Word-Count/"
+        site: "https://chas-henrik.github.io/Word-Count/",
+        image: "Project4"
     },
     {
-        image: "Project5",
-        name: "Profile-Card", 
-        description: "Profile Card Project",
+        name: "Profile Card", 
+        description: "Small profile card project",
         techStack: "CSS, HTML",
         repo: "https://github.com/Chas-Henrik/Profile-Card/", 
-        site: "https://chas-henrik.github.io/Profile-Card/"
+        site: "https://chas-henrik.github.io/Profile-Card/",
+        image: "Project5"
     },
     {
-        image: "Project6",
-        name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", 
-        description: "NextJS version of JobChaser",
-        techStack: "CSS, JavaScript, TypeScript",
+        name: "Job Chaser", 
+        description: "A tool for finding remote jobs",
+        techStack: "CSS, JavaScript, TypeScript, NextJS",
         repo: "https://github.com/Chas-Henrik/u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", 
-        site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/"
+        site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/",
+        image: "Project6"
     }
 ];
 const skillsAccumulated = {};
