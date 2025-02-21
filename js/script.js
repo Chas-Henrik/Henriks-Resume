@@ -45,12 +45,12 @@ function expandAllDetails(e) {
 
 // *** Connect to GitHub & populate page ***
 const REPOS = [ 
-    {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/"}, 
-    {name: "OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/"},
-    {name: "ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"},
-    {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
-    {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
-    {name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/"}
+    {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/", image: "Project1"}, 
+    {name: "OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/", image: "Project2"},
+    {name: "ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/", image: "Project3"},
+    {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/", image: "Project4"},
+    {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/", image: "Project5"},
+    {name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/", image: "Project6"}
 ];
 const skillsAccumulated = {};
 
@@ -254,25 +254,61 @@ async function populateProjectCards() {
     const cardArticle = projectCardsDiv.querySelectorAll(".card");
     const repoObjs = [];
     const languageObjs = [];
+    const cardContainerElement = document.getElementById("projectCards");
     // Fetch data from GitHub API
     await fetchRepoEndpoints(REPOS, repoObjs, languageObjs);
 
-    for(let i=0; i<cardArticle.length && i<repoObjs.length; i++) {
-        const card = cardArticle[i];
-        const repoObj = repoObjs[i]; 
-        const titleElement = card.querySelector(".card__title");
-        const descriptionElement = card.querySelector(".card__description");
-        const techStackElement = card.querySelector(".card__tech-stack");
-        const linkElements = card.querySelectorAll("a");
+    for(let i=0; i<repoObjs.length; i++) {
         const languageStr = Object.keys(languageObjs[i].data).sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1).join(", ");
-
-        // Populate card elements with data from GitHub API
-        titleElement.innerText = repoObj.data.name;
-        descriptionElement.innerText = repoObj.data.description;
-        techStackElement.innerText = languageStr;
-        linkElements[0].href = REPOS[i].site;
-        linkElements[1].href = repoObj.data.html_url;
+        createCard(cardContainerElement, REPOS[i], repoObjs[i], languageStr);
     };
+}
+
+function createCard(parentElement, repo, repoObj, languageStr) {
+    const articleElement = document.createElement('article');
+    articleElement.classList.add("card");
+    articleElement.innerHTML = `
+        <article class="card">
+            <picture class="card__picture">
+                <source srcset=""${repo.image}.webp" type="image/webp">
+                <source srcset=""${repo.image}.png" type="image/png">
+                <img class="card__image" src="./img/${repo.image}.png" alt="${repo.image} Image" loading="lazy">
+            </picture>
+            <div class="card__content">
+                <h2 class="card--text card__title heading__size--card-title">${repoObj.data.name}</h2>
+                <p class="card--text card__description paragraph__size--card-description">${repoObj.data.description}</p>
+                <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                        class="card--text card__tech-stack paragraph__size--footnote-span">${languageStr}</span></p>
+                <footer class="card__footer">
+                    <nav>
+                        <a class="card--text footer__link paragraph__size--footer-link" href="${repo.site}"
+                            target="_blank">
+                            <picture>
+                                <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                    loading="lazy">
+                            </picture>
+                            Live Preview
+                        </a>
+                    </nav>
+                    <nav>
+                        <a class="card--text footer__link paragraph__size--footer-link" href="${repoObj.data.html_url}"
+                            target="_blank">
+                            <picture>
+                                <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                    loading="lazy">
+                            </picture>
+                            View Code
+                        </a>
+                    </nav>
+                </footer>
+            </div>
+        </article>
+        `
+    parentElement.appendChild(articleElement);
 }
 
 async function fetchRepoEndpoints(repos, repoObjs, languageObjs) {
