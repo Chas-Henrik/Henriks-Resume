@@ -1,0 +1,221 @@
+{
+    "introduction": {
+        "name": "Henrik Suurik",
+        "title": "Senior Embedded & Fullstack JavaScript Developer",
+        "location": "Stockholm, Sweden",
+        "email": "henrik.suurik@chasacademy.se"
+    },
+    "aboutMe": {
+        "description": "I am a Fullstack JavaScript Developer & Senior Embedded Software Developer with over 25 years of experience in the field. I have a Master of Science in Computer Science from University of New Haven (CT, USA), and a Bachelor of Science in Electrical Engineering from Royal Institute of Technology (Stockholm, Sweden). I have worked in various roles, including Senior Embedded Software Consultant, Senior Software Engineer, Project Leader, Software Manager, and Sr. Applications Engineer. I have a wide range of skills, including JavaScript, C, C++, C#, Python, and ARM assembler. My last position was Senior Embedded Software Consultant at Evidente ES East AB, where I worked as a consultant for 5 years. I am passionate about software development and enjoy working on challenging projects that push me to learn new skills and technologies."
+    },
+    "workExperience": [
+        {
+            "role": "Senior Embedded Software Consultant",
+            "type": "Full-Time",
+            "provider": "Evidente ES East AB",
+            "date": "2019 - 2024",
+            "location": "Stadshagen, Sweden",
+            "description": ["Developed secondary bootloaders for the ERTEC200P-2 evaluation board",
+            "Ported the NUCLEO-F722ZE Secondary Bootloader to the customers F723ZC board.",
+            "Flash burner for S29WS512PCypressSemiconductor NOR flash memory.",
+            "Ported SW from x86-64 to MIPS-MTI (32bit, littleendian)",
+            "Upgraded Linux kernel from 4.5.3 to 4.9.249", 
+            "Linux kernel module development", 
+            "Linux application development"],
+            "skills": ["ARM assembler", "C", "C++", "C++11", "C++17", "Python 3.X", "Tcl/Tk", "Embedded Linux", "C#/.Net", "Windows Forms",
+            "WPF", "Xamarin", "eCos operating system", "Eclipse", "ARM926EJ-S", "STM32 NUCLEO-F722ZE", "ERTEC200P-2", "F723ZC board",
+            "S29WS512PCypressSemiconductor NOR flash memory", "STM32 CubeMX", "STM32 CubeIDE", "STM32 CubeProgrammer", 
+            "U-boot", "Buildroot", "Scons", "CMake", "Make", "GCC", "Bash", "Git", "GitLab", "Jenkins", "Docker", "Visual Studio Code", "Vagrant", 
+            "Codescape's MIPS-MTI gnu-g++ Linux crosscompiler version 9.3.0", "x86-64", "MIPS-MTI (32bit, littleendian)", "Board bring up", "MQTT", "Jira"]
+        },
+        {
+            "role": "System/Software Designer",
+            "type": "Full-Time",
+            "provider": "Plockmatic International AB",
+            "date": "2017 - 2019",
+            "location": "Hägersten, Sweden",
+            "description": ["Responsible for the SW development of the Booklet Maker & Internal Feeder module (see https://plockmaticgroup.com/plockmatic/product/pbm5000-series/)", 
+            "Responsible for the SW System Design of NorthStar (PBM5000 Series) SW modules (see https://plockmaticgroup.com/plockmatic/product/pbm5000-series/)"],
+            "skills": ["C++", "Bare-Metal", "STM32F105VBT6", "SVN"]
+        },
+        {
+            "role": "Embedded Software Consultant",
+            "type": "Full-Time",
+            "provider": "4Real AB",
+            "date": "2016 - 2017",
+            "location": "Kista, Sweden",
+            "description": ["Consultant"],
+            "skills": ["Python 3.X"]
+        },
+        {
+            "role": "Senior Software Engineer",
+            "type": "Full-Time",
+            "provider": "ABB (Lorentzen & Wettre)",
+            "date": "2012 - 2016",
+            "location": "Kista, Sweden",
+            "description": ["SW architect for the next generation Autoline (automated paper testing).", 
+            "Software design/implementation of 4 applications (Air Permeance tester, PPS tester, Bendtsen tester & Sheffield tester) using 'Platform 4'.",
+            "Software design/implementation of 'Fiber tester Plus'.",
+            "Hardware & Software design/implementation of new RS485 full duplex port & Temperature Sensor (I2C) on 'Platform 4'."],
+            "skills": ["SW Architecture", "System Design", "C++", "C", "Embedded Linux", "Linux Kernel device drivers", "Eclipse", "QT Creator", "PXA27x", "Delphi", "Git", "UART", "I2C"]
+        },
+        {
+            "role": "Project Leader",
+            "type": "Full-Time",
+            "provider": "Lorentzen & Wettre",
+            "date": "2011 - 2012",
+            "location": "Kista, Sweden",
+            "description": ["Project leader for the development of the Lorentzen & Wettres new platform board that will be used in approximately 30 different test instruments.",
+            "Hardware/software design/implementation of a new HW/SW platform called 'Platform 4'.",
+            "GUI development using QT Creator.",
+            "Kernel device driver development for Embedded Linux."],
+            "skills": ["SW Architecture", "System Design", "Embedded Linux", "Linux Kernel device drivers", "C", "C++", "Eclipse", "QT Creator", "Combitech's development board", "PXA27x", "Git", "Delphi", "SPI", "I2C", "UART", "PWM", "ADC", "VGA", "LVDS", "Timers", "NOR & NAND Flash", "U-Boot Bootloader", "DMA",
+            "Ethernet", "USB", "RTC"]
+        },
+        {
+            "role": "Project Leader",
+            "type": "Full-Time",
+            "provider": "Lorentzen & Wettre",
+            "date": "2010 - 2011",
+            "location": "Kista, Sweden",
+            "description": ["System development/programming of Lorenzen & Wettres new Consistency Transmitter."],
+            "skills": ["C", "Renesa's H8S/2367", "IAR Systems compiler", "RTXC OS", "ADC", "DAC"]
+        },
+        {
+            "role": "Project Leader",
+            "type": "Full-Time",
+            "provider": "Lorentzen & Wettre",
+            "date": "2009 - 2010",
+            "location": "Kista, Sweden",
+            "description": ["Further development of Lorenzen & Wettre’s Fiber tester and L&W Autoline Formation."],
+            "skills": ["Delphi", "MS SQL 2000", "MS SQL 2005", "MS SQL 2008"]
+        },
+        {
+            "role": "Software Manager",
+            "type": "Full-Time",
+            "provider": "W&W Communications, Inc.",
+            "date": "2006 - 2008",
+            "location": "Beijing, China",
+            "description": ["Broke down the customer requirements, and distributed tasks to the codec engineers and project leaders.",
+            "Represented W&W Communications in the joint effort of developing an interface between the W&W Communications H.264-, H.263-, H.263+-, MPEG4-, CIF-, QCIF-transcoder and the customers (Freescale) framework.",
+            "Designed and built a complete test environment for the Transcoder.",
+            "Created the Transcoder test application (using SmartDSP OS and various other Freescale software packages) running on Freescale'’'s MSC8101 & MSC8122 & 8144 DSP. This application was later used as a reference design for the Transcoder application to be part of the Ericsson IMS gateway.",
+            "Responsible for the integration tests and packaging of the Transcoder to be shipped to the customer.",
+            "Embedded design and development for Freescale's 8101- & 8122 - & 8144 -ADS board.",
+            "Software development on Freescale's MSC8101 & MSC8122 & MSC8144 Digital Signal Processor using Code Warrior 2.7.2 & 3.0."],
+            "skills": ["H.264", "H.263", "H.263+", "MPEG4", "Freescale's 8101- & 8122 - & 8144 -ADS board.",
+            "Freescale's MSC8101 DSP", "Freescale's MSC8122 DSP", "Freescale's MSC8144 DSP", "Code Warrior 2.7.2 & 3.0.", "Project Management."]
+        },
+        {
+            "role": "Sr. Applications Engineer",
+            "type": "Full-Time",
+            "provider": "DSP Research / W&W Communications, Inc.",
+            "date": "2001 - 2005",
+            "location": "Santa Clara, USA",
+            "description": ["Designing and implementing various networked H.264 VIDEO & AUDIO demo applications and reference designs for TI’s DM642 EVM board.",
+            "Developed flash burners & boot loaders.",
+            "Software Development, System Design, Applications Engineering, Network Administration, Webmaster, Search Engine Optimization, Testing of new products, Marketing, and Technical Support.",
+            "Software and system development of the embedded DSP application and PC application for various H.264 / MPEG4 AVC demos and reference designs.",
+            "Embedded DSP programming for TI’s DM642 EVM board in a multitasked real time environment.",
+            "MFC / Win 32 programming in a multithreaded real time environment.",
+            "Software development on TI's DM642 Video/Imaging Fixed-Point Digital Signal Processor using Code Composer Studio (C6000).",
+            "Technical Support for DSP emulators and H.264 / MPEG4 AVC Video Compression Boards.",
+            "Management and maintenance of a Windows 2000 Servers.",
+            "Management and maintenance of a LAN and Email server."],
+            "skills": [
+            "MFC", 
+            "Win 32 programming",
+            "Philips 7115 Video Decoder chip",
+            "TI's DM642 Video/Imaging Fixed-Point DSP",
+            "Code Composer Studio (C6000)",
+            "TCP/UDP IP socket programming",
+            "Driver development",
+            "Install Shield scripting",
+            "Windows 2000 Server",
+            "LAN",
+            "E-mail server",
+            "H.264 / MPEG4 AVC",
+            "Microsoft Front Page 2002",
+            "Adobe Photoshop 7.0.",
+            "Client-Server programming",
+            "JTAG Emulators"]
+        },
+        {
+            "role": "Network Integrator",
+            "type": "Full-Time",
+            "provider": "Ericsson Telecom AB",
+            "date": "1998-1999",
+            "location": "Nacka, Sweden",
+            "description": ["Testing and network integration of various WAN products.", 
+            "Installation and management of Sun Solaris workstations."],
+            "skills": ["Bridges (GDC APEX)", "IP routing & switching", "RIP", "OSPF", "BGP", 
+            "ATM (PNNI & UNI signaling, PVC & SPVC connections)", "SDH (Marconi's SDH cross connectors)", 
+            "MPLS", "WAN Routers", "LAN Routers", "Junipers M40", "Bay Networks BLN", "AM and ASM routers", "Cisco's 7507 and 4000 series routers", 
+            "Access Routers (ACCs Danube)", "Firewalls (Cisco's PIX firewall)", "Modem Pools (ACCs Tigris)", "ATM Switches (Ericsson's AXD 301)"]
+        },
+        {
+            "role": "Traffic Measurements & Network evaluations",
+            "type": "Full-Time",
+            "provider": "Ericsson Radio Systems AB",
+            "date": "1996 - 1998",
+            "location": "Kista, Sweden",
+            "description": ["Traffic Measurements & Network evaluations.", "Installation and maintenance of Win NT 4.0 for workstations.", 
+            "Statistics and post processing of measurement data.", "OSS (management system for the AXE switch).", "Various UNIX shell script programming."],
+            "skills": ["HTML", "UNIX", "C-shell", "Bash", "Visual Basic 5.0", "Visual Basic for Applications (Excel & Word)"]
+        },
+        {
+            "role": "System & Software Designer",
+            "type": "Full-Time",
+            "provider": "Ericsson Radio Systems AB",
+            "date": "1994 - 1995",
+            "location": "Kista, Sweden",
+            "description": ["Programming", "System Design", "Concurrent programming"],
+            "skills": ["Telecommunication switches", "AXE, MSS subsystem", "The programming language PLEX"]
+        },
+        {
+            "role": "Master Thesis",
+            "type": "Master Thesis",
+            "provider": "Ericsson Radio Systems AB",
+            "date": "1993",
+            "location": "Kista, Sweden",
+            "description": ["Investigation of execution times in a round robin queuing system with multiple priority queues using time-sharing."],
+            "skills": ["Queuing theory", "SDL"]
+        }
+    ],
+    "education": [
+        {
+            "role": "University of Applied Sciences Degree",
+            "type": "Full-Time",
+            "provider": "Chas Academy",
+            "date": "2024 - present",
+            "location": "Stockholm, Sweden",
+            "description": ["Fullstack JavaScript", "220 'YH-credits'"]
+        },
+        {
+            "role": "Master of Science, Computer Science",
+            "type": "Full-Time",
+            "provider": "University of New Haven",
+            "date": "1999 - 2001",
+            "location": "New Haven, USA",
+            "description": ["Master of Science, Computer Science", "Advanced Applications Concentration", "48 American credits", "GPA 4.16 (on a 4.3 scale)"]
+        },
+        {
+            "role": "Bachelor of Science, Electrical Engineering",
+            "type": "Full-Time",
+            "provider": "Royal Institute of Technology",
+            "date": "1990 - 1993",
+            "location": "Stockholm, Sweden",
+            "description": ["Bachelor of Science, Electrical Engineering", "Telecommunication and Switching Concentration", "120 Swedish credits ~ 81 American credits"]
+        },
+        {
+            "role": "Bachelor's Degree, Mathematics",
+            "type": "Half-Time",
+            "provider": "University of Stockholm",
+            "date": "1992 - 1993",
+            "location": "Stockholm, Sweden",
+            "description": ["Mathematics", "45 Swedish credits ~ 30 American credits"]
+        }
+    ]
+}
+
+

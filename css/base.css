@@ -1,0 +1,303 @@
+/*** Fonts ***/
+
+/*** Radley ***/
+
+/* radley-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Radley';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/radley-v22-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/*** Poppins ***/
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v21-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/poppins-v21-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v21-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-500italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../fonts/poppins-v21-latin-500italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-600italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../fonts/poppins-v21-latin-600italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/poppins-v21-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-700italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/poppins-v21-latin-700italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/*** DM Sans ***/
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dm-sans-v15-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/dm-sans-v15-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/dm-sans-v15-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-500italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../fonts/dm-sans-v15-latin-500italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/dm-sans-v15-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-600italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../fonts/dm-sans-v15-latin-600italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/dm-sans-v15-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-700italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/dm-sans-v15-latin-700italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Fonts*/
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "DM Sans", sans-serif;
+    --formal-font: "Radley", serif;
+
+    /* Theme colors */
+    --background-light-mode: #FFFFFF;
+    --background-dark-mode: #191919;
+    --background-card-dark-mode: #363636;
+    --solid-heading-light-mode: #42446E;
+    --solid-heading-dark-mode: #CCCCCC;
+    --dark-content-light-mode: #555555;
+    --dark-content-dark-mode: #CCCCCC;
+    --light-content-light-mode: #757575;
+    --light-content-dark-mode: #A7A7A7;
+    --very-light-content-dark-mode: #D9D9D9;
+    --black-content-light-mode: #000000;
+    --black-content-dark-mode: #FFFFFF;
+    --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
+    --box-shadow-dark-mode: 2px 2px 30px 0px #d8d7d733;
+    --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
+    --box-shadow-tiny-light-mode: 2px 2px 10px 0px #00000033;
+    --box-shadow-tiny-dark-mode: 2px 2px 10px 0px #d8d7d733;
+    --background-progress-bar: #FFFFFF;
+    --background-progress-bar-dark-mode: #363636;
+    --progress-bar-text-color: #000000;
+    --progress-bar-text-color-dark-mode: #FFFFFF;
+    --progress-bar-color-value: #0F0BFC;
+    --progress-bar-color: #BCE9F5;
+    --background-first-letter: #BCE9F5;
+    --contact-light-mode: #1E0E62;
+    --contact-dark-mode: #D9D9D9;
+    --background-zebra-grid-header-light-mode: #F4F4F4;
+    --background-zebra-grid-odd-row-light-mode: #F8FEFF;
+    --background-zebra-grid-even-row-light-mode: #FFFFFF;
+    --background-zebra-grid-header-dark-mode: #282828;
+    --background-zebra-grid-odd-row-dark-mode: #1e1f29;
+    --background-zebra-grid-even-row-dark-mode: #000000;
+    --border-color-light-mode: #EBEAED;
+    --border-color-dark-mode: #42446E;
+    --skill-text-color: #00770C;
+    --background-button-success: #D7FFE0;
+    --details-button-color: #00770C;
+    --background-details-buttons: #F1F0F0;
+    --background-details-buttons-dark-mode: #CCCCCC;
+    --menu-color-hover: #54C4F8;
+    --icon-color-hover: #5CF;
+    --background-profile-border: #BCE9F5;
+}
+
+.text-shadow-active {
+    color: var(--menu-color-hover) !important;
+    text-shadow: 1px 1px 2px var(--menu-color-hover), 0 0 1em var(--menu-color-hover), 0 0 0.2em var(--progress-bar-color);
+}
+
+#progress-control-id {
+    position: fixed;
+    top: calc(50svh - 125px);
+    left: calc(50vw - 125px);
+    width: 250px;
+    height: 250px;
+    padding: 1rem;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#progress-bar-id {
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: conic-gradient(var(--progress-bar-color-value) 0deg, var(--progress-bar-color) 0deg);
+}
+
+#progress-bar-value-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#progress-action-id {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}

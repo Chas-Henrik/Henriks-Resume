@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Henrik Suurik's online CV/Resume">
+    <meta property="og:url" content="https://chas-henrik-u02-egen-portfoliosida.netlify.app/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Henrik's Portfolio Page">
+    <meta property="og:description" content="Henrik Suurik's online CV/Resume">
+    <meta property="og:site_name" content="Henrik's Site">
+    <meta property="og:image" content="https://chas-henrik-u02-egen-portfoliosida.netlify.app/img/Henrik-mobile.png">
+    <meta property="og:image:width" content="207">
+    <meta property="og:image:height" content="207">
+    <link rel="canonical" href="https://chas-henrik-u02-egen-portfoliosida.netlify.app/index.html">
+
+    <link rel="preload" href="./fonts/dm-sans-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/poppins-v21-latin-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload stylesheet" href="./css/base.css" as="style" fetchpriority="high">
+    <link rel="preload stylesheet" href="./css/index.css" as="style" fetchpriority="high">
+    <link rel="preload" href="./js/landing-page.js" as="script">
+
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://esm.sh" crossorigin="anonymous">
+    <script src="./js/landing-page.js" defer></script>
+    <title>Henrik's Portfolio Page</title>
+</head>
+
+<body>
+    <article id="progress-control-id">
+        <div id="progress-bar-id">
+            <p id="progress-bar-value-id">0%</p>
+        </div>
+        <h2 id="progress-action-id">Loading repo info from GitHub</h2>
+    </article>
+    <header id="header">
+        <nav class="flex__nav">
+            <picture class="flex__logo--chas">
+                <source srcset="./img/favicon.png" type="image/png" media="(prefers-color-scheme: light)">
+                <source srcset="./img/favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                <img class="image__logo--chas" src="./img/favicon.png" alt="Chas Academy Logo" fetchpriority="high">
+            </picture>
+            <nav id="menu" class="flex--menu paragraph__size--default-bold">
+                <ul id="menu__list--ul-buttons" class="menu__list menu__list--buttons">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#section-about">About</a></li>
+                    <li><a href="#section-skills">Skills</a></li>
+                    <li><a href="#section-tech-stack">Tech Stack</a></li>
+                    <li><a href="#section-projects">Projects</a></li>
+                    <li><a href="#section-contact">Contact</a></li>
+                </ul>
+                <ul class="menu__list menu__list--icons">
+                    <li><a href="https://github.com/Chas-Henrik" class="link--menu" target="_blank" title="GitHub">
+                            <svg class="svg-icon--menu" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"
+                                    fill="#666666" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/henrik-suurik-90a3167" class="link--menu" target="_blank"
+                            title="LinkedIn">
+                            <svg class="svg-icon--menu" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_600_27)">
+                                    <path
+                                        d="M15 0.599976C7.04701 0.599976 0.600006 7.04698 0.600006 15C0.600006 22.953 7.04701 29.4 15 29.4C22.953 29.4 29.4 22.953 29.4 15C29.4 7.04698 22.953 0.599976 15 0.599976ZM11.475 20.9685H8.55901V11.5845H11.475V20.9685ZM9.99901 10.4325C9.07801 10.4325 8.48251 9.77997 8.48251 8.97297C8.48251 8.14948 9.09601 7.51648 10.0365 7.51648C10.977 7.51648 11.553 8.14948 11.571 8.97297C11.571 9.77997 10.977 10.4325 9.99901 10.4325ZM22.125 20.9685H19.209V15.768C19.209 14.5575 18.786 13.7355 17.7315 13.7355C16.926 13.7355 16.4475 14.292 16.236 14.8275C16.158 15.018 16.1385 15.288 16.1385 15.5565V20.967H13.221V14.577C13.221 13.4055 13.1835 12.426 13.1445 11.583H15.678L15.8115 12.8865H15.87C16.254 12.2745 17.1945 11.3715 18.768 11.3715C20.6865 11.3715 22.125 12.657 22.125 15.42V20.9685Z"
+                                        fill="#666666" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_600_27">
+                                        <rect width="30" height="30" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://x.com/HSuurik8796" class="link--menu" target="_blank" title="Twitter">
+                            <svg class="svg-icon--menu" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.875 1.875C8.59152 1.875 1.875 8.59152 1.875 16.875C1.875 25.1585 8.59152 31.875 16.875 31.875C25.1585 31.875 31.875 25.1585 31.875 16.875C31.875 8.59152 25.1585 1.875 16.875 1.875ZM24.0837 13.1819C24.0937 13.3393 24.0937 13.5033 24.0937 13.6641C24.0937 18.5792 20.3504 24.2411 13.51 24.2411C11.4007 24.2411 9.44531 23.6283 7.79799 22.5737C8.09933 22.6071 8.38728 22.6205 8.69531 22.6205C10.4364 22.6205 12.0368 22.0312 13.3125 21.0335C11.6786 21 10.3058 19.9286 9.83705 18.4554C10.4096 18.5391 10.9252 18.5391 11.5145 18.3884C10.6732 18.2175 9.91699 17.7605 9.37438 17.0953C8.83178 16.43 8.53623 15.5973 8.53795 14.7388V14.692C9.03013 14.9699 9.60938 15.1406 10.2154 15.1641C9.70595 14.8245 9.28814 14.3645 8.99903 13.8249C8.70993 13.2852 8.55845 12.6825 8.55804 12.0703C8.55804 11.3772 8.73884 10.7444 9.06362 10.1953C9.99744 11.3449 11.1627 12.2851 12.4837 12.9548C13.8047 13.6245 15.2518 14.0088 16.731 14.0826C16.2054 11.5547 18.0938 9.50893 20.3638 9.50893C21.4353 9.50893 22.3996 9.95759 23.0792 10.6808C23.9196 10.5234 24.7232 10.2087 25.4397 9.78683C25.1618 10.6473 24.5792 11.3739 23.8058 11.8326C24.5558 11.7522 25.279 11.5446 25.9487 11.2533C25.4431 11.9967 24.8103 12.6562 24.0837 13.1819Z"
+                                    fill="#666666" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <label id="hamburger-menu" class="label__size--hamburger label__cursor--hamburger image__color--invert"
+                title="Expand/Collapse Menu">
+                <svg class="svg-icon__display--hamburger svg-icon--hamburger" xmlns="http://www.w3.org/2000/svg"
+                    width="33px" height="33px" viewBox="0 -960 960 960" fill="#000000">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </label>
+        </nav>
+    </header>
+    <main>
+        <!-- Introduction (Home) -->
+        <div id="home" class="flex-introduction">
+            <picture>
+                <source media="(max-width: 650px)" srcset="./img/Henrik-mobile.webp?width=207 207w" type="image/webp"
+                    sizes="207px">
+                <source media="(max-width: 650px)" srcset="./img/Henrik-mobile.png?width=207 207w" type="image/png"
+                    sizes="207px">
+                <source media="(min-width: 650px) and (max-width: 1023px)"
+                    srcset="./img/Henrik-tablet.webp?width=248 248w" type="image/webp" sizes="248px">
+                <source media="(min-width: 650px) and (max-width: 1023px)"
+                    srcset="./img/Henrik-tablet.png?width=248 248w" type="image/png" sizes="248px">
+                <source media="(min-width: 1024px)" srcset="./img/Henrik-desktop.webp?width=310 310w" type="image/webp"
+                    sizes="310px">
+                <source media="(min-width: 1024px)" srcset="./img/Henrik-desktop.png?width=310 310w" type="image/png"
+                    sizes="310px">
+                <img class="image--profile" src="./img/Henrik-desktop.png?width=310" alt="Henrik's Profile Image"
+                    fetchpriority="high">
+            </picture>
+            <aside class="grid--introduction paragraph__size--introduction">
+                <p class="header--introduction">Name :</p>
+                <p>Henrik Suurik</p>
+                <p class="header--introduction">Title :</p>
+                <div>
+                    <p>Fullstack JavaScript Developer,</p>
+                    <p>Senior Embedded Developer</p>
+                </div>
+                <p class="header--introduction">Language :</p>
+                <p>Swedish, English</p>
+                <p class="header--introduction">Location :</p>
+                <p>Nacka, Sweden</p>
+                <p class="header--introduction">E-mail :</p>
+                <a class="link--introduction" href="mailto:henrik.suurik@chasacademy.se"
+                    target="_blank">henrik.suurik@chasacademy.se</a>
+            </aside>
+        </div>
+        <!-- About Section -->
+        <section id="section-about">
+            <h2 class="section__item--about heading__margin--vertical heading__size--default break-before--page">About Me</h2>
+            <p id="about--description" class="section__item--about first-paragraph paragraph__size--about"></p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="section-skills">
+            <h2 class="heading__margin--vertical heading__size--default break-before--page">Skills</h2>
+
+            <h3 class="heading__margin--vertical heading__size--small">Work Experience</h3>
+            <!-- Work Experience Container -->
+            <div id="grid-work-experience"></div>
+
+            <h3 class="heading__margin--vertical heading__size--small break-before--page">Top 15 Skills</h3>
+            <!-- Skills Accumulated Container -->
+            <div id="grid-skills-accumulated-id" class="grid-skills-accumulated break-inside--avoid"></div>
+            <p class="paragraph__size--default paragraph__style-italic"><span class="grid-skills--note">Note: </span>The
+                accumulated years in the table above is not entirely accurate since the data has been assembled from the
+                experience tables above. The purpose of the table is to give a rough idea of my top 15 skills, rather
+                than provide the exact number of years of experience for each skill.</p>
+
+            <h3 class="heading__margin--vertical heading__size--small break-before--page">Education</h3>
+            <!-- Education Container -->
+            <div id="grid-education"></div>
+        </section>
+        <!-- Tech Stack Section -->
+        <section id="section-tech-stack">
+            <h2 class="heading__margin--vertical heading__size--default break-before--page">My Tech Stack</h2>
+            <p class="paragraph__size--default">Technologies I've been working with recently</p>
+            <div class="flex-row-wrap flex-row-wrap__gap--tech-stack flex-row-wrap__margin--tech-stack">
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/HTML5.svg" 
+                        alt="HTML5 Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/CSS3.svg" 
+                        alt="CSS3 Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/JavaScript.svg" 
+                        alt="JavaScript Image" loading="lazy">
+                </figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/React.svg" 
+                        alt="React Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/Redux.svg" 
+                        alt="Redux Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/nodejs.svg" 
+                        alt="NodeJS Image" loading="lazy"></figure>
+                <picture class="figure--tech-stack">
+                    <source srcset="./svg/expressjs.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./svg/expressjs-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="image__size--tech-stack" src="./svg/expressjs.svg" alt="ExpressJS Image" loading="lazy">
+                </picture>
+                <picture class="figure--tech-stack">
+                    <source srcset="./svg/nextjs.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./svg/nextjs-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="image__size--tech-stack" src="./svg/nextjs.svg" alt="NextJS Image" loading="lazy">
+                </picture>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/mongodb.svg" 
+                        alt="MongoDB Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/postgresql.svg" 
+                        alt="PostgreSQL Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/TailwindCSS.svg" 
+                        alt="TailwindCSS Image" loading="lazy">
+                </figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/Sass.svg" 
+                        alt="Sass Image" loading="lazy"></figure>
+            </div>
+            <h2 class="heading__size--default break-before--page">Tools</h2>
+            <div class="flex-row-wrap flex-row-wrap__gap--tech-stack flex-row-wrap__margin--tech-stack">
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/VSCode.svg" 
+                        alt="VSCode Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/Git.svg" 
+                        alt="Git Image" loading="lazy">
+                </figure>
+                <picture class="figure--tech-stack">
+                    <source srcset="./svg/GitHub.svg" media="(prefers-color-scheme: light)">
+                    <source srcset="./svg/GitHub-dark.svg" media="(prefers-color-scheme: dark)">
+                    <img class="image__size--tech-stack" src="./svg/GitHub.svg"  alt="GitHub Image" loading="lazy">
+                </picture>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/Figma.svg" 
+                        alt="Figma Image" loading="lazy"></figure>
+                <figure class="figure--tech-stack"><img class="image__size--tech-stack" src="./svg/NPM.svg" 
+                        alt="NPM Image" loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="section-projects">
+            <h2 class="heading__margin--vertical heading__size--default break-before--page">Projects</h2>
+            <p class="paragraph__size--default">Things I've built so far</p>
+            <div id="projectCards"
+                class="flex-row-wrap flex-row-wrap__gap--project-card flex-row-wrap__margin--project-card">
+                <article class="card">
+                    <picture class="card__picture">
+                        <source srcset="./img/Project1.webp" type="image/webp">
+                        <source srcset="./img/Project1.png" type="image/png">
+                        <img class="card__image" src="./img/Project1.png" alt="Project1 Image" loading="lazy">
+                    </picture>
+                    <div class="card__content">
+                        <h2 class="card--text card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card--text card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="card--text card__tech-stack paragraph__size--footnote-span">HTML</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://app.netlify.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://github.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <picture class="card__picture">
+                        <source srcset="./img/Project2.webp" type="image/webp">
+                        <source srcset="./img/Project2.png" type="image/png">
+                        <img class="card__image" src="./img/Project2.png" alt="Project2 Image" loading="lazy">
+                    </picture>
+                    <div class="card__content">
+                        <h2 class="card--text card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card--text card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="card--text card__tech-stack paragraph__size--footnote-span">HTML</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://app.netlify.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://github.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <picture class="card__picture">
+                        <source srcset="./img/Project3.webp" type="image/webp">
+                        <source srcset="./img/Project3.png" type="image/png">
+                        <img class="card__image" src="./img/Project3.png" alt="Project3 Image" loading="lazy">
+                    </picture>
+                    <div class="card__content">
+                        <h2 class="card--text card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card--text card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="card--text card__tech-stack paragraph__size--footnote-span">HTML</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://app.netlify.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://github.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <picture class="card__picture">
+                        <source srcset="./img/Project4.webp" type="image/webp">
+                        <source srcset="./img/Project4.png" type="image/png">
+                        <img class="card__image" src="./img/Project4.png" alt="Project4 Image" loading="lazy">
+                    </picture>
+                    <div class="card__content">
+                        <h2 class="card--text card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card--text card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="card--text card__tech-stack paragraph__size--footnote-span">HTML</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://app.netlify.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://github.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <picture class="card__picture">
+                        <source srcset="./img/Project5.webp" type="image/webp">
+                        <source srcset="./img/Project5.png" type="image/png">
+                        <img class="card__image" src="./img/Project5.png" alt="Project5 Image" loading="lazy">
+                    </picture>
+                    <div class="card__content">
+                        <h2 class="card--text card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card--text card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="card--text card__tech-stack paragraph__size--footnote-span">HTML</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://app.netlify.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://github.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+                <article class="card">
+                    <picture class="card__picture">
+                        <source srcset="./img/Project6.webp" type="image/webp">
+                        <source srcset="./img/Project6.png" type="image/png">
+                        <img class="card__image" src="./img/Project6.png" alt="Project6 Image" loading="lazy">
+                    </picture>
+                    <div class="card__content">
+                        <h2 class="card--text card__title heading__size--card-title">Project Tile goes here</h2>
+                        <p class="card--text card__description paragraph__size--card-description">This is a sample project
+                            description
+                            random things are here in description This is a sample project lorem ipsum generator for
+                            dummy
+                            content</p>
+                        <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
+                                class="card--text card__tech-stack paragraph__size--footnote-span">HTML</span></p>
+                        <footer class="card__footer">
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://app.netlify.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/ChainCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/ChainCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/ChainCard.svg" alt="Chain Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    Live Preview
+                                </a>
+                            </nav>
+                            <nav>
+                                <a class="card--text footer__link paragraph__size--footer-link" href="https://github.com/"
+                                    target="_blank">
+                                    <picture>
+                                        <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
+                                        <source srcset="./svg/GitHubCard-dark.svg" media="(prefers-color-scheme: dark)">
+                                        <img class="footer__img--card" src="./svg/GitHubCard.svg" alt="GitHub Icon"
+                                            loading="lazy">
+                                    </picture>
+                                    View Code
+                                </a>
+                            </nav>
+                        </footer>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="section-contact">
+            <h2 class="heading__margin--vertical heading__size--default break-before--page">Contact Information</h2>
+            <address class="container--contact">
+                <p class="paragraph--contact paragraph__size--contact-large">E-mail:</p>
+                <a class="link--contact" href="mailto:henrik.suurik@chasacademy.se" target="_blank">
+                    <svg class="svg-icon--contact" xmlns="http://www.w3.org/2000/svg" height="2rem"
+                        viewBox="0 -960 960 960" width="2rem" fill="#000">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg>
+                    <p class="paragraph__size--contact">henrik.suurik@chasacademy.se</p>
+                </a>
+                <p class="paragraph--contact paragraph__size--contact-large">Mobile:</p>
+                <a class="link--contact paragraph__size--contact" href="tel:+46707180388" target="_blank">
+                    <svg class="svg-icon--contact" xmlns="http://www.w3.org/2000/svg" height="2rem"
+                        viewBox="0 -960 960 960" width="2rem" fill="#000">
+                        <path
+                            d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-120v40h400v-40H280Zm0-80h400v-480H280v480Zm0-560h400v-40H280v40Zm0 0v-40 40Zm0 640v40-40Z" />
+                    </svg>
+                    <p class="paragraph__size--contact">+46 70 7180388</p>
+                </a>
+            </address>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="paragraph__size--default-small">Copyright &copy; 2024 Designed and built by Henrik Suurik</p>
+    </footer>
+    <script src="./js/json-loader.js" type="module" fetchpriority="low"></script>
+    <script src="./js/github-api.js" type="module" fetchpriority="low"></script>
+    <script src="./js/script.js" type="module" fetchpriority="low"></script>
+</body>
+
+</html>

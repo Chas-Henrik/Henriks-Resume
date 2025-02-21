@@ -1,0 +1,52 @@
+# Set Content-Type for SVG files
+/*.svg
+  Content-Type: image/svg+xml; charset=utf-8
+
+# Set Content-Type for JSON files
+/*.json
+  Content-Type: application/json; charset=utf-8
+
+# Set X-Content-Type-Options for all responses
+/
+  X-Content-Type-Options: nosniff
+
+/*
+  X-Content-Type-Options: nosniff
+
+# Don't cache (default)
+/
+  Cache-Control: public, no-cache
+
+/*
+  Cache-Control: public, no-cache
+
+# Don't cache html & json resources
+
+/*.html
+  Cache-Control: public, no-cache
+
+/*.json
+  Cache-Control: public, no-cache
+
+# Cache css & js resources for 24hrs
+
+/*.css
+  Cache-Control: public, max-age=86400
+
+/*.js
+  Cache-Control: public, max-age=86400
+
+# Cache fonts & images for one year
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
