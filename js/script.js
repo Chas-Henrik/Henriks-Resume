@@ -1,5 +1,4 @@
 import { isCVUpdated, loadCV, saveToLocalStorage, readFromLocalStorage } from "./json-loader.js";
-import { connectToGitHub, getRepoEndpoints } from "./github-api.js";
 
 // *** Progress Bar functions ***
 
@@ -45,12 +44,54 @@ function expandAllDetails(e) {
 
 // *** Connect to GitHub & populate page ***
 const REPOS = [ 
-    {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/", image: "Project1"}, 
-    {name: "OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/", image: "Project2"},
-    {name: "ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/", image: "Project3"},
-    {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/", image: "Project4"},
-    {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/", image: "Project5"},
-    {name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/", image: "Project6"}
+    {
+        image: "Project1",
+        name: "Minesweeper",
+        description: "Minesweeper game",
+        techStack: "CSS, HTML, JavaScript",
+        repo: "https://github.com/Chas-Henrik/Minesweeper/", 
+        site: "https://chas-henrik.github.io/Minesweeper/"
+    }, 
+    {
+        image: "Project2",
+        name: "OOP-Poker",
+        description: "Online Poker Game for 2-5 players",
+        techStack: "CSS, HTML, JavaScript",
+        repo: "https://github.com/Chas-Henrik/OOP-Poker/", 
+        site: "https://chas-henrik.github.io/OOP-Poker/"
+    },
+    {
+        image: "Project3",
+        name: "ToDo-List-Typescript-Firebase", 
+        description: "ToDo List Typescript with Firestore Database",
+        techStack: "CSS, HTML, JavaScript, TypeScript",
+        repo: "https://github.com/Chas-Henrik/ToDo-List-Typescript-Firebase/", 
+        site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"
+    },
+    {
+        image: "Project4",
+        name: "Word-Count", 
+        description: "Counts the word in submitted text",
+        techStack: "CSS, HTML, JavaScript",
+        repo: "https://github.com/Chas-Henrik/Word-Count/", 
+        site: "https://chas-henrik.github.io/Word-Count/"
+    },
+    {
+        image: "Project5",
+        name: "Profile-Card", 
+        description: "Profile Card Project",
+        techStack: "CSS, HTML",
+        repo: "https://github.com/Chas-Henrik/Profile-Card/", 
+        site: "https://chas-henrik.github.io/Profile-Card/"
+    },
+    {
+        image: "Project6",
+        name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", 
+        description: "NextJS version of JobChaser",
+        techStack: "CSS, JavaScript, TypeScript",
+        repo: "https://github.com/Chas-Henrik/u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", 
+        site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/"
+    }
 ];
 const skillsAccumulated = {};
 
@@ -61,7 +102,6 @@ async function main() {
         displayProgressControl("flex");
         updateProgressAction("Populating page with JSON data...");
         updateProgressBar(0);
-        await connectToGitHub();
         await populatePage();
     } catch (error) {
         console.error("Error:", error);
@@ -74,7 +114,7 @@ async function main() {
 
 async function populatePage() {
     await populateGrid();
-    await populateProjectCards();
+    populateProjectCards();
 }
 
 
@@ -250,21 +290,13 @@ function populateAccumulatedSkillsElement(sortedSkillsArray) {
 // *** Populate projects from GitHub ***
 
 async function populateProjectCards() {
-    const projectCardsDiv = document.getElementById("projectCards");
-    const cardArticle = projectCardsDiv.querySelectorAll(".card");
-    const repoObjs = [];
-    const languageObjs = [];
     const cardContainerElement = document.getElementById("projectCards");
-    // Fetch data from GitHub API
-    await fetchRepoEndpoints(REPOS, repoObjs, languageObjs);
-
-    for(let i=0; i<repoObjs.length; i++) {
-        const languageStr = Object.keys(languageObjs[i].data).sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1).join(", ");
-        createCard(cardContainerElement, REPOS[i], repoObjs[i], languageStr);
+    for(let i=0; i<REPOS.length; i++) {
+        createCard(cardContainerElement, REPOS[i]);
     };
 }
 
-function createCard(parentElement, repo, repoObj, languageStr) {
+function createCard(parentElement, repo) {
     const articleElement = document.createElement('article');
     articleElement.classList.add("card");
     articleElement.innerHTML = `
@@ -275,10 +307,10 @@ function createCard(parentElement, repo, repoObj, languageStr) {
                 <img class="card__image" src="./img/${repo.image}.png" alt="${repo.image} Image" loading="lazy">
             </picture>
             <div class="card__content">
-                <h2 class="card--text card__title heading__size--card-title">${repoObj.data.name}</h2>
-                <p class="card--text card__description paragraph__size--card-description">${repoObj.data.description}</p>
+                <h2 class="card--text card__title heading__size--card-title">${repo.name}</h2>
+                <p class="card--text card__description paragraph__size--card-description">${repo.description}</p>
                 <p class="card--text card__footnote paragraph__size--card-footnote">Tech Stack :&nbsp;<span
-                        class="card--text card__tech-stack paragraph__size--footnote-span">${languageStr}</span></p>
+                        class="card--text card__tech-stack paragraph__size--footnote-span">${repo.techStack}</span></p>
                 <footer class="card__footer">
                     <nav>
                         <a class="card--text footer__link paragraph__size--footer-link" href="${repo.site}"
@@ -293,7 +325,7 @@ function createCard(parentElement, repo, repoObj, languageStr) {
                         </a>
                     </nav>
                     <nav>
-                        <a class="card--text footer__link paragraph__size--footer-link" href="${repoObj.data.html_url}"
+                        <a class="card--text footer__link paragraph__size--footer-link" href="${repo.repo}"
                             target="_blank">
                             <picture>
                                 <source srcset="./svg/GitHubCard.svg" media="(prefers-color-scheme: light)">
@@ -309,18 +341,6 @@ function createCard(parentElement, repo, repoObj, languageStr) {
         </article>
         `
     parentElement.appendChild(articleElement);
-}
-
-async function fetchRepoEndpoints(repos, repoObjs, languageObjs) {
-    for(let i=0; i<repos.length; i++) {
-        const repoName = REPOS[i].name;
-        const endpointObjs = await getRepoEndpoints(repoName, ['GET /repos/{owner}/{repo}', 'GET /repos/{owner}/{repo}/languages']);
-        updateProgressBar(10 + 90*(i+1)/repos.length);
-        if(endpointObjs != null) {
-            repoObjs.push(endpointObjs[0]);
-            languageObjs.push(endpointObjs[1]);
-        }
-    };
 }
 
 
