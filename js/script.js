@@ -50,7 +50,7 @@ const REPOS = [
     {name: "ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"},
     {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
     {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
-    {name: "Menu-Nailbiter", site: "https://chas-henrik.github.io/Menu-Nailbiter/"}
+    {name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/"}
 ];
 const skillsAccumulated = {};
 
