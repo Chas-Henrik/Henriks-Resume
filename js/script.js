@@ -99,14 +99,9 @@ await main();
 
 async function main() {
     try {
-        displayProgressControl("flex");
-        updateProgressAction("Populating page with JSON data...");
-        updateProgressBar(0);
         await populatePage();
     } catch (error) {
         console.error("Error:", error);
-    } finally {
-        displayProgressControl("none");
     }
 }
 
@@ -128,7 +123,6 @@ async function populateGrid() {
         populateGridContainer(dataObj["workExperience"], "grid-work-experience");
         populateAccumulatedSkillsElement(getSortedSkillsArray());
         populateGridContainer(dataObj["education"], "grid-education");
-        updateProgressBar(10);
     } catch (error) {
         console.error("Unable to read JSON file:", error);
     }
