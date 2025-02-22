@@ -1,4 +1,4 @@
-import { isCVUpdated, loadCV, saveToLocalStorage, readFromLocalStorage } from "./json-loader.js";
+import { isCVUpdated, loadCV, loadProjects, saveToLocalStorage, readFromLocalStorage } from "./json-loader.js";
 
 // *** Progress Bar functions ***
 
@@ -43,56 +43,6 @@ function expandAllDetails(e) {
 }
 
 // *** Connect to GitHub & populate page ***
-const REPOS = [ 
-    {
-        name: "Minesweeper",
-        description: "Minesweeper game",
-        techStack: "CSS, HTML, JavaScript",
-        repo: "https://github.com/Chas-Henrik/Minesweeper/", 
-        site: "https://chas-henrik.github.io/Minesweeper/",
-        image: "Project1"
-    }, 
-    {
-        name: "Online Poker",
-        description: "Online poker game for 2-5 players",
-        techStack: "CSS, HTML, JavaScript",
-        repo: "https://github.com/Chas-Henrik/OOP-Poker/", 
-        site: "https://chas-henrik.github.io/OOP-Poker/",
-        image: "Project2"
-    },
-    {
-        name: "Todo List", 
-        description: "Todo list using Firestore database",
-        techStack: "CSS, HTML, JavaScript, TypeScript",
-        repo: "https://github.com/Chas-Henrik/ToDo-List-Typescript-Firebase/", 
-        site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/",
-        image: "Project3"
-    },
-    {
-        name: "Word Count", 
-        description: "Counts the word in submitted text",
-        techStack: "CSS, HTML, JavaScript",
-        repo: "https://github.com/Chas-Henrik/Word-Count/", 
-        site: "https://chas-henrik.github.io/Word-Count/",
-        image: "Project4"
-    },
-    {
-        name: "Profile Card", 
-        description: "Small profile card project",
-        techStack: "CSS, HTML",
-        repo: "https://github.com/Chas-Henrik/Profile-Card/", 
-        site: "https://chas-henrik.github.io/Profile-Card/",
-        image: "Project5"
-    },
-    {
-        name: "Job Chaser", 
-        description: "A tool for finding remote jobs",
-        techStack: "CSS, JavaScript, TypeScript, NextJS",
-        repo: "https://github.com/Chas-Henrik/u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", 
-        site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/",
-        image: "Project6"
-    }
-];
 const skillsAccumulated = {};
 
 await main();
@@ -109,7 +59,7 @@ async function main() {
 
 async function populatePage() {
     await populateGrid();
-    populateProjectCards();
+    await populateProjectCards();
 }
 
 
@@ -131,7 +81,6 @@ async function populateGrid() {
 // Populate About Me
 function populateAboutMe(aboutMeObj) {
     const aboutDescriptionElement = document.getElementById("about--description");
-    const p = document.createElement('p');
     aboutDescriptionElement.innerText = aboutMeObj["description"];
 }
 
@@ -284,9 +233,10 @@ function populateAccumulatedSkillsElement(sortedSkillsArray) {
 // *** Populate projects from GitHub ***
 
 async function populateProjectCards() {
+    const repos = await loadProjects("./../json/projects.json");
     const cardContainerElement = document.getElementById("projectCards");
-    for(let i=0; i<REPOS.length; i++) {
-        createCard(cardContainerElement, REPOS[i]);
+    for(let i=0; i<repos.length; i++) {
+        createCard(cardContainerElement, repos[i]);
     };
 }
 
