@@ -41,7 +41,7 @@
     },
     {
         "name": "Job Chaser", 
-        "description": "A tool for finding remote jobs",
+        "description": "A tool for finding remote jobs (frontend only project using NextJS)",
         "techStack": "CSS, JavaScript, TypeScript, React, NextJS",
         "repo": "https://github.com/Chas-Henrik/u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", 
         "site": "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/",
