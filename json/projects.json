@@ -24,11 +24,11 @@
         "image": "Project3"
     },
     {
-        "name": "Word Count", 
-        "description": "Counts the word in submitted text",
-        "techStack": "CSS, HTML, JavaScript",
-        "repo": "https://github.com/Chas-Henrik/Word-Count/", 
-        "site": "https://chas-henrik.github.io/Word-Count/",
+        "name": "Adventure Excursions", 
+        "description": "E-commerce site for booking adventure excursions",
+        "techStack": "CSS, Typescript, Vue 3, Nuxt 4",
+        "repo": "https://github.com/Chas-Henrik/vue-upplevelsesida/", 
+        "site": "https://vue-upplevelsesida.vercel.app/",
         "image": "Project4"
     },
     {
